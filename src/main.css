@@ -1,0 +1,73 @@
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+}
+
+.hide {
+  display: none !important;
+}
+
+.drag {
+  opacity: .6;
+}
+
+.banner {
+  position: relative;
+  text-align: center;
+  background-color: yellow;
+  width: 200px;
+  margin: 12px auto 0 auto;
+}
+
+.side-panel {
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  margin: 12px;
+}
+
+.container-div {
+  float: left;
+}
+
+.container-div-right {
+  float: right;
+  padding-top: 125px;
+  height: 100%;
+}
+
+.annotation-panel-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fields {
+  flex: 1 0 auto;
+}
+
+.annotation-panel {
+  height: 97%;
+}
+
+.textarea {
+  resize: vertical;
+  height: 100px;
+  min-height: 100px;
+  max-height: 200px;
+}
+
+.w325 {
+  width: 325px;
+}
+
+.status {
+  margin-left: 10px;
+}

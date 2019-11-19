@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Testing</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <!-- Mapbox Assembly -->
+  <link href="./vendor/assembly.min.css" rel="stylesheet">
+  <script async defer src="./vendor/assembly.js"></script>
+  <!-- Mapbox Assembly Add-On -->
+  <link href="./vendor/assemblyAO.min.css" rel="stylesheet">
+  <script src="./vendor/assemblyAO.js"></script>
+  <!-- Custom styles -->
+  <link href="main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="absolute top right left bottom">
+    <div id="map" class="absolute top left right bottom"></div>
+    <div id="annotation_banner" class="banner hide">
+      Annotation Mode
+    </div>
+  </div>
+  <div class="container-div">
+    <div id="info_panel" class="w325 side-panel">
+      <div class="p12 scroll-auto">
+        <img src="{logo}" />
+        <h3 class="txt-m txt-bold mb6">{header}</h3>
+        <p class="mb6">{description}</p>
+      </div>
+      <div id="basemap-toggle" class="p12 flex-parent w325">
+        <button id="streets" class="btn btn--pill btn--pill-stroke btn--red btn--pill-hl txt-s flex-child--grow">Streets</button>
+        <button id="light" class="btn btn--stroke btn--pill-stroke btn--red btn--pill-hc txt-s flex-child--grow">Light</button>
+        <button id="dark" class="btn btn--stroke btn--pill-stroke btn--red btn--pill-hc txt-s flex-child--grow">Dark</button>
+        <button id="satellite-streets" class="btn btn--stroke btn--pill-stroke btn--red btn--pill-hr txt-s flex-child--grow">Satellite</button>
+      </div>
+
+      <div class="p12 flex-parent w325">
+        <button id="annotation_toggle" class="btn btn--stroke btn--pill-stroke btn--red txt-s flex-child--grow">Turn Annotation Mode <span id="annotation_onoff">On</span></button>
+      </div>
+
+      <div class="p12 scroll-auto">
+        <h3 class="txt-m txt-bold mb6">Add Layers</h3>
+        <div id="dnd_area" class="area txt-s">Drag and drop files onto the map to add them <br /> (.shp, .csv, .kml, or .geojson)</div>
+        <div id="layers_added" class="layers_added hide">
+          <p class="txt-bold mt24">Layers</p>
+          <ul id="layer_list" class="layer_list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-div-right">
+    <div id="annotation_panel" class="hide w325 side-panel annotation-panel annotation-panel-flex">
+      <div class="w325 bg-white round-ml scroll-auto">
+        <h3 class="p12 txt-m txt-bold mb6">Annotation Information</h3>
+      </div>
+      <div class="p12 pt0 fields">
+        <div class="txt-bold">Unique ID:</div>
+        <input disabled id="annotation_id" class="input" placeholder="UID" />
+        <div class="txt-bold">Name:</div>
+        <input id="annotation_name" class="input" placeholder="Name of annotation" />
+        <div class="txt-bold">Description:</div>
+        <textarea id="annotation_desc" class="textarea" placeholder="Description of annotation"></textarea>
+        <div class="txt-bold">Notes:</div>
+        <textarea id="annotation_notes" class="textarea" placeholder="Notes about the annotation"></textarea>
+      </div>
+      <div class="save-area p12 flex-parent">
+        <button id="annotation_save" class="btn btn--stroke">Save</button>
+        <span id="annotation_spinner" class="loading .loading--s status hide"></span>
+      </div>
+    </div>
+  </div>
+  <script src="index.js" type="text/javascript"></script>
+</body>
+
+</html>

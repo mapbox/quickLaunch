@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+build
+.cache
+
+src/index.js
+src/index.html
+src/app.js
+*.zip
