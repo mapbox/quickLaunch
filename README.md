@@ -23,7 +23,7 @@ Mapbox Rapid Deploy is a workflow that creates a situational awareness dashboard
 
 ## Getting Started
 
-These instructions will create a development version of the dashboard and set up a live-reloading local environment. To deploy into production, see [Deployment](#deployment). If you need a fully offline development environment, you can download a ZIP file from `Releases` that includes all development dependencies.
+These instructions will create a development version of the dashboard and set up a live-reloading local environment. To deploy into production, see [Deployment](#deployment). If you need a fully offline development environment, you can [download a ZIP](https://github.com/mapbox/rapidDeploy/releases/download/v1.0/RapidDeployOffline.zip) file from `Releases` that includes all development dependencies.
 
 Rapid Deploy provides the following functionality:
 
