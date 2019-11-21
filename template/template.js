@@ -287,12 +287,21 @@ let drawTools;
 mapboxgl.accessToken = "{accessToken}";
 mapboxgl.baseApiUrl = "{url}";
 
+const transformRequest = (url) => {
+  const hasQuery = url.indexOf("?") !== -1;	  
+  const suffix = hasQuery ? "&pluginName=rapidDeploy" : "?pluginName=rapidDeploy";	  
+  return {
+    url: url + suffix
+  }	  
+}
+
 const map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/mapbox/streets-v9",
   center: [-104.37, 38.67],
   zoom: 3.68,
-  attributionControl: false
+  attributionControl: false,
+  transformRequest: transformRequest
 });
 
 const popupOffsets = {
@@ -301,7 +310,7 @@ const popupOffsets = {
 
 const popup = new mapboxgl.Popup({
   offset: popupOffsets
-});
+});m
 
 map.dragRotate.disable();
 map.touchZoomRotate.disableRotation();

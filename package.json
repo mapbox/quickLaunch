@@ -44,11 +44,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/mapbox/operational-dashboard.git"
+    "url": "git+ssh://git@github.com/mapbox/mapbox/rapidDeploy.git"
   },
   "author": "mapbox",
   "bugs": {
-    "url": "https://github.com/mapbox/operational-dashboard/issues"
+    "url": "https://github.com/mapbox/rapidDeploy/issues"
   },
-  "homepage": "https://github.com/mapbox/operational-dashboard#readme"
+  "homepage": "https://github.com/mapbox/rapidDeploy#readme"
 }
