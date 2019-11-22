@@ -310,7 +310,7 @@ const popupOffsets = {
 
 const popup = new mapboxgl.Popup({
   offset: popupOffsets
-});m
+});
 
 map.dragRotate.disable();
 map.touchZoomRotate.disableRotation();
