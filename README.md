@@ -65,7 +65,7 @@ map.addLayer({
   "type":"layertype",
   "source":{
     type:'vector',
-    url:'mapboxL//tilesetid'
+    url:'mapbox://tilesetid'
   },
   "source-layer":"source",
   [...]
