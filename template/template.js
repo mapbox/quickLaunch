@@ -288,11 +288,11 @@ mapboxgl.accessToken = "{accessToken}";
 mapboxgl.baseApiUrl = "{url}";
 
 const transformRequest = (url) => {
-  const hasQuery = url.indexOf("?") !== -1;	  
-  const suffix = hasQuery ? "&pluginName=rapidDeploy" : "?pluginName=rapidDeploy";	  
+  const hasQuery = url.indexOf("?") !== -1;
+  const suffix = hasQuery ? "&pluginName=rapidDeploy" : "?pluginName=rapidDeploy";
   return {
     url: url + suffix
-  }	  
+  }
 }
 
 const map = new mapboxgl.Map({
@@ -452,7 +452,11 @@ function switchLayer(layer) {
   const layerId = layer.target.id;
   layer.target.classList.remove("btn--stroke");
   layer.target.classList.add("btn--pill");
-  map.setStyle("mapbox://styles/mapbox/" + layerId + "-v9");
+  if(layerId.indexOf("mapbox") >=0) {
+    map.setStyle("mapbox://styles/" + layerId + "-v9");
+  } else {
+    map.setStyle("mapbox://styles/" + layerId);
+  }
 }
 
 for (let i = 0; i < buttons.length; i++) {
