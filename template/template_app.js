@@ -15,7 +15,8 @@ const mongoose = require("mongoose");
 
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://{db_url}:27017/{db_name}", {
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 const FeaturesSchema = new mongoose.Schema({
   feature: Object,

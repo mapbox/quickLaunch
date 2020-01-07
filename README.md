@@ -13,6 +13,7 @@ Mapbox Rapid Deploy is a workflow that creates a situational awareness dashboard
     - [Installation](#installation)
     - [Custom Styles](#custom-styles)
     - [Search](#search)
+    - [Errors](#errors)
   - [Deployment](#deployment)
     - [Environment Considerations](#environment-considerations)
       - [From BUILD Directory](#from-build-directory)
@@ -111,8 +112,8 @@ To use enterprise features, you must procure your own MongoDB Enterprise license
 1. Clone this repository
 
 ```bash
-git clone git@github.com:mapbox/operationsDashboardBlueprint.git
-cd operationsDashboardBlueprint
+git clone git@github.com:mapbox/rapidDeploy.git
+cd rapidDeploy
 ```
 
 2. Install Dependencies
@@ -185,6 +186,14 @@ map.addControl(new MapboxGeocoder({
   origin: <AtlasURL>
 }));
 ```
+
+### Errors
+
+During the build process, you may see the following image in your terminal.
+
+![error](assets/error.png)
+
+This is a warning related to the build tool, and can safely be ignored at this time.
 
 ---
 
