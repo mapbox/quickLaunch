@@ -292,8 +292,8 @@ mapboxgl.baseApiUrl = "{url}";
 const transformRequest = url => {
   const hasQuery = url.indexOf("?") !== -1;
   const suffix = hasQuery
-    ? "&pluginName=rapidDeploy"
-    : "?pluginName=rapidDeploy";
+    ? "&pluginName=quickLaunch"
+    : "?pluginName=quickLaunch";
   return {
     url: url + suffix
   };
