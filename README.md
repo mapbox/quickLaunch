@@ -1,7 +1,7 @@
-# Mapbox Rapid Deploy
+# Mapbox Quick Launch
 
-Mapbox Rapid Deploy is a workflow that creates a situational awareness dashboard. It enables users to connect to their internal data sources, collaboratively annotate the map, and share knowledge with their stakeholders. Rapid Deploy works out of the box in both online and offline environments and can be customized to fit any use case.
-- [Mapbox Rapid Deploy](#mapbox-rapid-deploy)
+Mapbox Quick Launch is a workflow that creates a situational awareness dashboard. It enables users to connect to their internal data sources, collaboratively annotate the map, and share knowledge with their stakeholders. Quick Launch works out of the box in both online and offline environments and can be customized to fit any use case.
+- [Mapbox Quick Launch](#mapbox-quick-launch)
   - [Getting Started](#getting-started)
     - [Requirements](#requirements)
       - [Mapbox account](#mapbox-account)
@@ -24,9 +24,9 @@ Mapbox Rapid Deploy is a workflow that creates a situational awareness dashboard
 
 ## Getting Started
 
-These instructions will create a development version of the dashboard and set up a live-reloading local environment. To deploy into production, see [Deployment](#deployment). If you need a fully offline development environment, you can [download a ZIP](https://github.com/mapbox/rapidDeploy/releases/download/v1.0/RapidDeployOffline.zip) file from `Releases` that includes all development dependencies.
+These instructions will create a development version of the dashboard and set up a live-reloading local environment. To deploy into production, see [Deployment](#deployment). If you need a fully offline development environment, you can [download a ZIP](https://github.com/mapbox/quickLaunch/releases/download/v1.0/QuickLaunch.zip) file from `Releases` that includes all development dependencies.
 
-Rapid Deploy provides the following functionality:
+Quick Launch provides the following functionality:
 
 1. Connection to Mapbox.com OR Mapbox Atlas
 2. Search Bar
@@ -56,7 +56,7 @@ You will need a valid Mapbox token to make requests to Mapbox APIs with a public
 
 #### Data
 
-There is sample geojson data provided in the `data` folder. Rapid Deploy supports KML, CSV, geoJSON, or Shapefiles via drag-and-drop.
+There is sample geojson data provided in the `data` folder. Quick Launch supports KML, CSV, geoJSON, or Shapefiles via drag-and-drop.
 
 If you wish to use Mapbox or Atlas hosted tilesets - either add them to a style and [update the chosen style](https://github.com/mapbox/operationsDashboardBlueprint/blob/master/template/template.js#L285) or add the tilesets to the map [programatically](https://docs.mapbox.com/mapbox-gl-js/example/vector-source/).
 
@@ -91,7 +91,7 @@ For development, this dashboard will run a Dockerized version of Mongo. You can 
 
 The version of MongoDB used in the Docker container is MongoDB Community edition. This is free-to-use and features are documented on the [MongoDB website](https://docs.mongodb.com/manual/).
 
-To use enterprise features, you must procure your own MongoDB Enterprise license and update the Rapid Deploy accordingly. Mapbox will not provide MongoDB support.
+To use enterprise features, you must procure your own MongoDB Enterprise license and update the Quick Launch accordingly. Mapbox will not provide MongoDB support.
 
 ---
 
@@ -107,13 +107,13 @@ To use enterprise features, you must procure your own MongoDB Enterprise license
 
 ### Installation
 
-> *If you wish to develop in a fully offline environment, please download RapidDeployOffline.zip from Releases. Then skip to Step 3.*
+> *If you wish to develop in a fully offline environment, please download QuickLaunchOffline.zip from Releases. Then skip to Step 3.*
 
 1. Clone this repository
 
 ```bash
-git clone git@github.com:mapbox/rapidDeploy.git
-cd rapidDeploy
+git clone git@github.com:mapbox/quickLaunch.git
+cd quickLaunch
 ```
 
 2. Install Dependencies
@@ -130,7 +130,7 @@ npm run config
 
 ![config](assets/config.gif)
 
-> The Favicon and Logo are optional and do not affect the functionality of Rapid Deploy.
+> The Favicon and Logo are optional and do not affect the functionality of Quick Launch.
 
 This will update the template code and produce a development-ready version of the dashboard, as well as start the Dockerized MongoDB. If you would like to verify that MongoDB is running, run `curl localhost:27017` and you should see the following:
 
@@ -199,7 +199,7 @@ This is a warning related to the build tool, and can safely be ignored at this t
 
 ## Deployment
 
-Rapid Deploy can be configured to work with Atlas and Mapbox.com. In the case of Atlas, this dashboard assumes that Atlas has been installed, is running, and the URL is known.
+Quick Launch can be configured to work with Atlas and Mapbox.com. In the case of Atlas, this dashboard assumes that Atlas has been installed, is running, and the URL is known.
 
 To build for production, you will need to run `npm run build`. This will compile all your code and move it to the `build` folder. This folder will exist prior to running the `build` command, as the development compiler will output data to that folder.
 
@@ -207,7 +207,7 @@ However, this code is not optimized, so you should run `build` before deploying.
 
 Once building has completed, you can move the contents of the `build` folder to its final destination and serve it with the web server of your choice.
 
-You can also serve the Rapid Deploy directly by running `npm run deploy` instead of `npm run build`. This will build and start a static web server at port 5000.
+You can also serve the Quick Launch directly by running `npm run deploy` instead of `npm run build`. This will build and start a static web server at port 5000.
 
 ### Environment Considerations
 
