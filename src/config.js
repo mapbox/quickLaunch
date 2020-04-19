@@ -65,7 +65,7 @@ inquirer
         "{url}",
         answers.url.includes("api.mapbox.com") ?
         `https://api.mapbox.com` :
-        `http://${answers.url}:2999`
+        `${answers.url}`
       )
       .replace("{accessToken}", answers.token);
     fs.writeFileSync("src/index.js", indexJS);
